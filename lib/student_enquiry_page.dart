@@ -14,7 +14,6 @@ class _StudentEnquiryPageState extends State<StudentEnquiryPage> {
 
   String? gender;
 
-  // ✅ Controllers Added
   final Map<String, TextEditingController> controllers = {
     "First Name": TextEditingController(),
     "Middle Name": TextEditingController(),
@@ -31,7 +30,6 @@ class _StudentEnquiryPageState extends State<StudentEnquiryPage> {
     "Course Name": TextEditingController(),
   };
 
-  // 🔹 Auto Generate Enquiry Number
   String generateEnquiryNumber() {
     final random = Random();
     int number = 1000 + random.nextInt(9000);
@@ -129,7 +127,7 @@ class _StudentEnquiryPageState extends State<StudentEnquiryPage> {
       body: Column(
         children: [
 
-          // 🔥 HEADER
+
           Container(
             width: double.infinity,
             padding: const EdgeInsets.only(top: 35, bottom: 10),
@@ -180,7 +178,7 @@ class _StudentEnquiryPageState extends State<StudentEnquiryPage> {
                     buildTextField("Reference", Icons.people),
                     buildTextField("Course Name", Icons.book),
 
-                    // 🔥 Gender Dropdown
+
                     Padding(
                       padding: const EdgeInsets.only(bottom: 15),
                       child: DropdownButtonFormField<String>(
@@ -222,7 +220,7 @@ class _StudentEnquiryPageState extends State<StudentEnquiryPage> {
 
                     const SizedBox(height: 25),
 
-                    // 🔥 Submit Button
+
                     SizedBox(
                       width: double.infinity,
                       height: 55,
@@ -237,7 +235,7 @@ class _StudentEnquiryPageState extends State<StudentEnquiryPage> {
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
 
-                            // ✅ Create Data Map
+
                             Map<String, dynamic> enquiryData = {};
 
                             controllers.forEach((key, controller) {

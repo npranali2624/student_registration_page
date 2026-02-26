@@ -53,7 +53,7 @@ class _StudentRegistrationPageState
     }
   }
 
-  // ✅ IMAGE PICKER
+
   Future<void> pickImage(bool isPhoto) async {
     final ImagePicker picker = ImagePicker();
     final XFile? image =
@@ -71,7 +71,7 @@ class _StudentRegistrationPageState
     }
   }
 
-  // ✅ TEXT FIELD BUILDER
+
   Widget buildTextField(
       String label,
       IconData icon, {
@@ -92,14 +92,14 @@ class _StudentRegistrationPageState
 
           value = value.trim();
 
-          // Name validation
+
           if (label.contains("Name")) {
             if (!RegExp(r'^[a-zA-Z ]+$').hasMatch(value)) {
               return "Only letters allowed";
             }
           }
 
-          // Email validation
+
           if (label == "Email") {
             if (!RegExp(
                 r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$')
@@ -116,7 +116,7 @@ class _StudentRegistrationPageState
             }
           }
 
-          // Grade OR Percentage validation
+
           if (label == "Grade/Percentage") {
             String input = value.trim();
 
@@ -162,7 +162,7 @@ class _StudentRegistrationPageState
     );
   }
 
-  // ✅ IMAGE UI
+
   Widget buildImagePicker({
     required String title,
     required Uint8List? imageBytes,
@@ -221,7 +221,7 @@ class _StudentRegistrationPageState
       body: Column(
         children: [
 
-          // HEADER
+
           Container(
             width: double.infinity,
             padding:
